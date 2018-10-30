@@ -13,13 +13,15 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Bobasaur
+title: "Bobasaur: The Boba Store"
 email: hello@bobasaurstore.com
 description: >- # this means to ignore newlines until "baseurl:"
   The Boba Store
 baseurl: "/bobasaur" # the subpath of your site, e.g. /blog
 url: "http://www.allisonjking.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: bobasaurstore
+instagram_username: bobasaurstore
+author: Say hi!
 show_excerpts: true
 
 # Build settings
