@@ -10,14 +10,14 @@ $base-line-height: 1.5 !default;
 
 $spacing-unit:     30px !default;
 
-$bobasaur-teal: rgb(61, 232, 196) !default;
-$bobasaur-light-green: rgb(191, 228, 114) !default;
+$bobasaur-green:  rgb(52, 124, 72) !default;
+$bobasaur-light-green: rgba(118, 207, 112, 0.32) !default;
 
-$background-color: #def4c3 !default;
+$background-color: #fdfdfd !default;
 
 $text-color:       #111 !default;
 
-$brand-color:      #2a7ae2 !default;
+$brand-color:      $bobasaur-green !default;
 
 $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
