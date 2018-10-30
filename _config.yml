@@ -17,8 +17,8 @@ title: Bobasaur
 email: hello@bobasaurstore.com
 description: >- # this means to ignore newlines until "baseurl:"
   The Boba Store
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/bobasaur" # the subpath of your site, e.g. /blog
+url: "http://www.allisonjking.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: bobasaurstore
 show_excerpts: true
 
