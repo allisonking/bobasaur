@@ -210,8 +210,10 @@
   //@include relative-font-size(1.5);
 }
 
-.post-wrapper:hover {
-  background: $bobasaur-light-green;
+.home {
+  .post-wrapper:hover {
+    background: $bobasaur-light-green;
+  }
 }
 
 .post-wrapper {
@@ -229,7 +231,7 @@
   padding: 20px;
 
   > img {
-    height: 100%;
+    height: auto;
     width: 100%;
     overflow: auto;
   }

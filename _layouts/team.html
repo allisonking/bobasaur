@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<div class="team">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.members.size > 0 -%}
+    <ul class="post-list">
+      {%- for member in site.members -%}
+      <li>
+        <div class='post-wrapper'>
+          {%- if member.image_url -%}
+          <div class='post-image'>
+              <img src="{{ site.baseurl }}/{{ member.image_url }}"/>
+          </div>
+          {%- endif -%}
+          <div class='post-content'>
+            <span class="post-meta">{{ member.role }}</span>
+            <h3>
+                {{ member.name | escape }}
+            </h3>
+            {{ member.description }}
+          </div>
+        </div>
+
+      </li>
+      <br><br>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+
+</div>
