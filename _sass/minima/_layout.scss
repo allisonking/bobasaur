@@ -224,6 +224,14 @@
   display: -webkit-flex;
   display: flex;
   border-radius: 5px;
+  @include media-query($on-palm) {
+    flex-direction: column;
+    .post-image {
+      > img {
+        width: auto;
+      }
+    }
+  }
 }
 
 .post-image {
