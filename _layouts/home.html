@@ -14,6 +14,7 @@ layout: default
     <ul class="post-list">
       {%- for post in site.posts -%}
       <li>
+        <a class="post-link" href="{% if post.ext_url %} {{ post.ext_url }} {% else %} {{ post.url | relative_url }} {% endif %}" {% if post.ext_url %}target="_blank"{% endif %}>
         <div class='post-wrapper'>
           {%- if post.image_url -%}
           <div class='post-image'>
@@ -24,12 +25,12 @@ layout: default
             {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
             <span class="post-meta">{{ post.date | date: date_format }}</span>
             <h3>
-              <a class="post-link" href="{% if post.ext_url %} {{ post.ext_url }} {% else %} {{ post.url | relative_url }} {% endif %}" {% if post.ext_url %}target="_blank"{% endif %}>
+
                 {{ post.title | escape }}
                 {%- if post.ext_url -%}
                 <span class="external-link"><i class="fas fa-external-link-alt"></i></span>
                 {%- endif -%}
-              </a>
+
 
             </h3>
             {%- if site.show_excerpts -%}
@@ -38,7 +39,7 @@ layout: default
 
           </div>
         </div>
-
+      </a>
 
       </li>
       <br><br>
