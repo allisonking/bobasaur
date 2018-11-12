@@ -14,9 +14,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: "Bobasaur: The Boba Store"
-email: hello@bobasaurstore.com
+email: hello@bobasaur.store
 description: >- # this means to ignore newlines until "baseurl:"
-  The Boba Store
+  Boston, MA
 baseurl: "/bobasaur" # the subpath of your site, e.g. /blog
 url: "http://www.allisonjking.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: bobasaurstore
@@ -32,6 +32,8 @@ plugins:
 
 collections:
   members:
+    output: false
+  menu:
     output: false
 
 # Exclude from processing.
