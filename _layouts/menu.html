@@ -2,24 +2,29 @@
 layout: default
 ---
 
-<div class="team">
+<div class="menu">
   {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
   {{ content }}
-
   {%- if site.menu.size > 0 -%}
-    <ul class="post-list">
+  {% for type in page.types %}
+  <div class='menu-type-wrapper'>
+    <h2> {{ type }} </h2>
+
+
+    <ul class="menu-list">
       {%- for menu_item in site.menu -%}
-      <li>
-        <div class='post-wrapper'>
+      {% if menu_item.type == type %}
+      <li class='menu-item'>
+        <div class='menu-wrapper'>
           {%- if menu_item.image_url -%}
-          <div class='post-image'>
+          <div class='menu-image'>
               <img src="{{ site.baseurl }}/{{ menu_item.image_url }}"/>
           </div>
           {%- endif -%}
-          <div class='post-content'>
+          <div class='menu-content'>
             <h3>
                 {{ menu_item.name | escape }}
             </h3>
@@ -28,9 +33,12 @@ layout: default
         </div>
 
       </li>
-      <br><br>
+      {%- endif -%}
       {%- endfor -%}
     </ul>
+  </div>
+
+  {% endfor %}
   {%- endif -%}
 
 </div>
