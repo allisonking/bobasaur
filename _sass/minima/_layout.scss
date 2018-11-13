@@ -308,3 +308,58 @@
     }
   }
 }
+
+// menu css
+.menu-list {
+  margin-left: 0;
+  list-style: none;
+
+  > li {
+    margin-bottom: $spacing-unit;
+    padding: 10px;
+    width: 100%;
+  }
+}
+
+.menu-wrapper {
+  float: left;
+  margin-bottom: $spacing-unit;
+  width: 100%;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  border-radius: 5px;
+  @include media-query($on-palm) {
+    flex-direction: column;
+    .menu-image {
+      > img {
+        width: auto;
+      }
+    }
+  }
+}
+
+.menu-image {
+  flex:1;
+  padding: 20px;
+
+  > img {
+    height: auto;
+    width: 100%;
+    overflow: auto;
+  }
+}
+
+.menu-item:nth-child(odd) .menu-wrapper {
+  flex-direction: row-reverse;
+}
+
+.menu-content {
+  flex:2;
+  padding: 15px;
+  .external-link {
+    padding-left: 10px;
+    display: none;
+    font-size: $small-font-size;
+  }
+}

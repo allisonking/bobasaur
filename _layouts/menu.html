@@ -10,16 +10,16 @@ layout: default
   {{ content }}
 
   {%- if site.menu.size > 0 -%}
-    <ul class="post-list">
+    <ul class="menu-list">
       {%- for menu_item in site.menu -%}
-      <li>
-        <div class='post-wrapper'>
+      <li class='menu-item'>
+        <div class='menu-wrapper'>
           {%- if menu_item.image_url -%}
-          <div class='post-image'>
+          <div class='menu-image'>
               <img src="{{ site.baseurl }}/{{ menu_item.image_url }}"/>
           </div>
           {%- endif -%}
-          <div class='post-content'>
+          <div class='menu-content'>
             <h3>
                 {{ menu_item.name | escape }}
             </h3>
