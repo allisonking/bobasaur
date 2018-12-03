@@ -373,7 +373,7 @@
   }
 }
 
-.home {
+.home-page {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -382,5 +382,30 @@
     img {
       width: 300px;
     }
+  }
+}
+
+.dino-wrapper {
+  display: flex;
+  justify-content: flex-end;
+
+  .dino-flair {
+    margin-top: -10px;
+    position: absolute;
+    width: 10%;
+    object-fit: contain;
+    @include media-query($on-palm) {
+      width: 20%;
+    }
+  }
+}
+
+.dino-end-wrapper {
+  display: flex;
+  justify-content: center;
+  .dino-flair {
+    width: 10%;
+    height: 10%;
+    object-fit: contain;
   }
 }

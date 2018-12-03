@@ -10,5 +10,9 @@ layout: default
   <div class="post-content">
     {{ content }}
   </div>
-
+  {%- if page.dino_pic -%}
+  <div class="dino-end-wrapper">
+    <img src="{{ site.baseurl }}/{{ page.dino_pic }}" class="dino-flair"/>
+  </div>
+  {%- endif -%}
 </article>
