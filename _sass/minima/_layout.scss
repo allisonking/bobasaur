@@ -132,6 +132,9 @@
   float: left;
   margin-bottom: $spacing-unit / 2;
   padding-left: $spacing-unit / 2;
+  p {
+    margin-bottom: 0px;
+  }
 }
 
 .footer-col-1 {
@@ -392,7 +395,7 @@
   .dino-flair {
     margin-top: -10px;
     position: absolute;
-    width: 10%;
+    width: 100px;
     object-fit: contain;
     @include media-query($on-palm) {
       width: 20%;
