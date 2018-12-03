@@ -372,3 +372,15 @@
     border-bottom: none;
   }
 }
+
+.home {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .coming-soon-pic { 
+    img {
+      width: 300px;
+    }
+  }
+}
