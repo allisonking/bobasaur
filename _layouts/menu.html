@@ -3,9 +3,7 @@ layout: default
 ---
 
 <div class="menu">
-    <div class="dino-wrapper">
-        <img src="/images/dino/dino_reaching.png" class="dino-flair"/>
-      </div>
+    
   {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
@@ -15,7 +13,15 @@ layout: default
   {% for type in page.types %}
   <div class='menu-type-wrapper'>
     <h2> {{ type }} </h2>
-
+    {% if type == 'Drink' %}
+    <div class="dino-wrapper">
+        <img src="/images/dino/dino_reaching.png" class="dino-flair"/>
+      </div>
+    {% else %}
+    <div class="dino-wrapper">
+        <img src="/images/dino/dino_eating.png" class="dino-flair"/>
+      </div>
+    {% endif %}
 
     <ul class="menu-list">
       {%- for menu_item in site.menu -%}
