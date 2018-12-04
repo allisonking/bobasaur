@@ -385,6 +385,22 @@
   align-items: center;
   flex-direction: column;
 
+  .logo-large {
+    display: block;
+    @include media-query($on-palm) {
+      display: none;
+    }
+  }
+
+  .logo-small {
+    display: none;
+    @include media-query($on-palm) {
+      display: block;
+    }
+  }
+
+  
+
   // .banner {
   //   background: url("/images/logo/logo_large.png") no-repeat;
   //   display: inline-block;
@@ -401,6 +417,7 @@
   }
 
   .dino-flair {
+    z-index: -1;
     margin-top: -10px;
     position: absolute;
     width: 100px;
